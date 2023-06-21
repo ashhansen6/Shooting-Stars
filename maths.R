@@ -1,10 +1,18 @@
-# Descent Speed, feet per tenth of a second 
-descent_speed = (3.22 * rkt_wt)
-# Ascent Speed, feet per tenth of a second
-net_force = eng_thrust - descent_speed
-ascent_speed = (net_force / rkt_wt) * eng_t_burn
+# To solve for:
+velocity_y = 0 # avg, (m/s); unknown
+velcotiy_x = 0 # avg, (m/s); unknown
+height = 0 # unknown
+drift = 0 # unknown
+airtime_up = 0 # unknown
+airtime_down = 0 # unknown
+descent_speed = 0 # unknown
 
-p = rep(0, 8)
-for (i in 2:8){
-  p[i] = p[i-1] + ascent_speed[i]
-}
+## Max height
+
+# <<COMMENT>> Need to calculate average velocity in both x and y direction
+height = sqrt((sin(theta)*velocity_y)^2 + (cos(theta)*velocity_x)^2)
+
+## Descent Speed, feet per tenth of a second 
+descent_speed = (height * full_wt_post) / (drift) %>%
+  tan()
+  
