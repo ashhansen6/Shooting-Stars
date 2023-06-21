@@ -1,0 +1,12 @@
+function ablestar__link_manager_is_404__production(){if(document.getElementsByTagName('body').length===1&&document.getElementsByTagName('body')[0].className.indexOf('404')>-1){return true}
+if(document.getElementsByTagName('body').length===1&&document.getElementsByTagName('body')[0].id.indexOf('404-')>-1){return true}
+if(document.getElementsByTagName('title').length>0&&document.getElementsByTagName('title')[0].text.indexOf('404 Not Found')>-1){return true}
+if(document.getElementById('shopify-section-404-template')!=null){return true}
+if(document.querySelector('meta[property="og:title"]')?.content==='404'){return true}
+return false}
+(function(){if(ablestar__link_manager_is_404__production()){var XHR=new XMLHttpRequest()
+var FD=new FormData()
+FD.append('shop_id','68602200369')
+FD.append('path',window.location.pathname)
+XHR.open('POST','https://linkmanager.ablestar.app/public/404-tracker')
+XHR.send(FD)}})()                                                                                     
