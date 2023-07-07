@@ -1,0 +1,15 @@
+At the start of the launch, the rocket is not moving. The only force acting on it is gravity. The net force acting on the rocket would be represented by its weight, <WEIGHT>. As the motor is ignited, it provides thrust. This thrust has an impulse of <IMPULSE>. This impulse of <IMPULSE> is measured over a burn time of <BURN TIME>. To calculate the distance the rocket has traveled at the instant the motor has been completely utilized, we would do so as such:
+-
+<DISTANCE A> = <BURN TIME> * (<IMPULSE>/<NET MASS>)
+-
+
+After that point, the only (assumed) force acting on the rocket would be gravity; for the current scenario, we are ignoring drag, which is very likely a significant factor in estimating the true distance travelled by the rocket. We can calculate the maximum height traveled by the rocket by tracking the distance travelled by the rocket as it decelerates until its velocity reaches zero. While we are doing this, we must remember that the motor includes a gas charge that will activate the recovery system after the set time of <EJECTION TIME>. Because the recovery system may be activated before the rocket reaches max height, we must be ready to consider the effect of drag caused by the recovery system. Our calculation would be as such:
+-
+
+
+where t <= <EJECTION TIME>
+- 
+
+
+
+* Measurements that have been coded into the parameters script are identified as such: <PARAMETER>
