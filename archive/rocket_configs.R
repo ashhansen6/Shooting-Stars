@@ -9,7 +9,7 @@ estes_a83 = list(name = "ESTES A8-3",
                  casing_wt = 15.6, #grams
                  casing_mass = 15.6 / 9.8, #grams
                  prop_wt = 0.00875, #grams
-                 mass = 0.00875 / 9.8, #grams
+                 prop_mass = 0.00875 / 9.8, #grams
                  gross_wt = 15.6 + 0.00875,#grams
                  gross_mass = (15.6 + 0.00875) / 9.8, #grams
                  impulse = 2.5, #Newton-seconds
